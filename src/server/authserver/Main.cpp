@@ -47,7 +47,7 @@ using namespace boost::program_options;
 using namespace AuthHelper;
 
 #ifndef _TRINITY_REALM_CONFIG
-# define _TRINITY_REALM_CONFIG  "authserver.conf"
+# define _TRINITY_REALM_CONFIG  "Settings/login.conf"
 #endif
 
 bool StartDB();

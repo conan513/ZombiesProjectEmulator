@@ -825,7 +825,7 @@ bool AuthSession::HandleLogonProof()
 	A.SetBinary(logonProof->A, 32);
 
 	// SRP safeguard: abort if A == 0
-	if (A.isZero())
+    if ((A % N).isZero())
 	{
 		return false;
 	}

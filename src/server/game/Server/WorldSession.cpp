@@ -1547,7 +1547,7 @@ uint32 WorldSession::DosProtection::GetMaxPacketCounterAllowed(uint16 opcode) co
     return maxPacketCounterAllowed;
 }
 
-void WorldSession::LoadAccountSpells()
+/*void WorldSession::LoadAccountSpells()
 {
 	PreparedStatement* stmt = LoginDatabase.GetPreparedStatement(LOGIN_SEL_ACCOUNT_SPELLS);
 	stmt->setUInt32(0, GetAccountId());
@@ -1559,9 +1559,9 @@ void WorldSession::LoadAccountSpells()
 			_accountSpell[spellId] = true;
 		} while (result->NextRow());
 	}
-}
+}*/
 
-void WorldSession::ModifyAccountSpell(bool learn, uint32 spell)
+/*void WorldSession::ModifyAccountSpell(bool learn, uint32 spell)
 {
 	if (learn && _accountSpell.find(spell) != _accountSpell.end())
 		return;
@@ -1580,9 +1580,9 @@ void WorldSession::ModifyAccountSpell(bool learn, uint32 spell)
 	stmt->setUInt32(0, GetAccountId());
 	stmt->setUInt32(1, spell);
 	LoginDatabase.Execute(stmt);
-}
+}*/
 
-void WorldSession::UpdateAccountSpells()
+/*void WorldSession::UpdateAccountSpells()
 {
 	if (!GetPlayer())
 		return;
@@ -1590,4 +1590,4 @@ void WorldSession::UpdateAccountSpells()
 	{
 		GetPlayer()->AddTemporarySpell(itr->first, true);
 	}
-}
+}*/
